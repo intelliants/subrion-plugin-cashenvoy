@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin name="cashenvoy">
+	<title>Cashenvoy</title>
+	<summary>Cashenvoy Payment Gateway integration. Allows to accept payments using Cashenvoy.</summary>
+	<author>Intelliants LLC</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>1.0.0</version>
+	<date>2016-02-12</date>
+	<status>active</status>
+	<category>payments</category>
+	<compatibility>4.0</compatibility>
+
+	<config group="financial" name="cashenvoy" type="divider">Cashenvoy</config>
+	<config group="financial" name="cashenvoy_id" type="text" description="Cashenvoy ID"><![CDATA[]]></config>
+	<config group="financial" name="cashenvoy_key" type="text" description="Cashenvoy KEY"><![CDATA[]]></config>
+	<config group="financial" name="cashenvoy_ssl_verify" type="radio" description="Cashenvoy SSL Verifier" values="0,1">0</config>
+	<config group="financial" name="cashenvoy_demo" type="radio" description="Cashenvoy DEMO" values="0,1">1</config>
+
+	<hooks>
+		<hook name="paymentButtons" type="smarty" filename="plugins/cashenvoy/templates/buttons.tpl"><![CDATA[]]></hook>
+	</hooks>
+
+	<phrases>
+		<phrase key="cashenvoy_options" category="admin">cashenvoy Options</phrase>
+
+		<phrase key="cashenvoy_payment_completed" category="common">Payment has been successfully completed.</phrase>
+		<phrase key="cashenvoy_payment_cancalled_by_user" category="common">User has cancelled the transaction.</phrase>
+		<phrase key="cashenvoy_payment_no_transaction" category="common">No transaction record.</phrase>
+		<phrase key="cashenvoy_payment_insufficient_funds" category="common">Insufficient funds.</phrase>
+		<phrase key="cashenvoy_payment_transaction_failed" category="common">Transaction failed. Contact support@cashenvoy.com for more information.</phrase>
+		<phrase key="cashenvoy_payment_unknown_error" category="common">Unknown error. Please contact site administrator.</phrase>
+	</phrases>
+</plugin>
