@@ -17,14 +17,11 @@
 	<config group="financial" name="cashenvoy_demo" type="radio" description="Cashenvoy DEMO" values="0,1">1</config>
 
 	<hooks>
-		<hook name="paymentButtons" type="smarty" filename="plugins/cashenvoy/templates/buttons.tpl"><![CDATA[]]></hook>
+		<hook name="paymentButtons" type="smarty" page_type="front" filename="button"><![CDATA[]]></hook>
 	</hooks>
 
 	<phrases>
-		<phrase key="cashenvoy_options" category="admin">cashenvoy Options</phrase>
-
-		<phrase key="cashenvoy_payment_completed" category="common">Payment has been successfully completed.</phrase>
-		<phrase key="cashenvoy_payment_cancalled_by_user" category="common">User has cancelled the transaction.</phrase>
+		<phrase key="cashenvoy_payment_canceled_by_inactivity" category="common">User cancellation by inactivity.</phrase>
 		<phrase key="cashenvoy_payment_no_transaction" category="common">No transaction record.</phrase>
 		<phrase key="cashenvoy_payment_insufficient_funds" category="common">Insufficient funds.</phrase>
 		<phrase key="cashenvoy_payment_transaction_failed" category="common">Transaction failed. Contact support@cashenvoy.com for more information.</phrase>

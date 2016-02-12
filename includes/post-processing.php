@@ -72,17 +72,17 @@ if (isset($action) && in_array($action, array('canceled', 'completed')))
 			{
 				case 'C00':
 					$error = false;
-					$msg = iaLanguage::get('cashenvoy_payment_completed');
+					$msg = iaLanguage::get('payment_done');
 					$transaction['status'] = iaTransaction::PASSED;
 					break;
 				case 'C01':
 					$error = true;
-					$msg = iaLanguage::get('cashenvoy_payment_cancalled_by_user');
+					$msg = iaLanguage::get('payment_canceled');
 					$transaction['status'] = iaTransaction::FAILED;
 					break;
 				case 'C02':
 					$error = true;
-					$msg = iaLanguage::get('cashenvoy_payment_cancalled_by_user');
+					$msg = iaLanguage::get('cashenvoy_payment_canceled_by_inactivity');
 					$transaction['status'] = iaTransaction::FAILED;
 					break;
 				case 'C03':
