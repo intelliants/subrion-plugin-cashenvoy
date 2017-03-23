@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<plugin name="cashenvoy">
-	<title>Cashenvoy</title>
-	<summary>Cashenvoy Payment Gateway integration. Allows to accept payments using Cashenvoy.</summary>
-	<author>Intelliants LLC</author>
-	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
-	<date>2016-02-12</date>
-	<status>active</status>
-	<category>payments</category>
-	<compatibility>4.0</compatibility>
+<module type="plugin" name="cashenvoy">
+    <title>Cashenvoy</title>
+    <summary>Cashenvoy Payment Gateway integration. Allows to accept payments using Cashenvoy.</summary>
+    <author>Intelliants LLC</author>
+    <contributor>Intelliants LLC</contributor>
+    <version>1.1.0</version>
+    <date>2017-03-23</date>
+    <status>active</status>
+    <category>payments</category>
+    <compatibility>4.1</compatibility>
 
-	<config group="financial" name="cashenvoy" type="divider">Cashenvoy</config>
-	<config group="financial" name="cashenvoy_id" type="text" description="Cashenvoy ID"><![CDATA[]]></config>
-	<config group="financial" name="cashenvoy_key" type="text" description="Cashenvoy KEY"><![CDATA[]]></config>
-	<config group="financial" name="cashenvoy_ssl_verify" type="radio" description="Cashenvoy SSL Verifier" values="0,1">0</config>
-	<config group="financial" name="cashenvoy_demo" type="radio" description="Cashenvoy DEMO" values="0,1">1</config>
+    <config group="financial" name="cashenvoy" type="divider">Cashenvoy</config>
+    <config group="financial" name="cashenvoy_id" type="text" description="Cashenvoy ID"><![CDATA[]]></config>
+    <config group="financial" name="cashenvoy_key" type="text" description="Cashenvoy KEY"><![CDATA[]]></config>
+    <config group="financial" name="cashenvoy_ssl_verify" type="radio" description="Cashenvoy SSL Verifier" values="0,1">0</config>
+    <config group="financial" name="cashenvoy_demo" type="radio" description="Cashenvoy DEMO" values="0,1">1</config>
 
-	<hooks>
-		<hook name="paymentButtons" type="smarty" page_type="front" filename="button"><![CDATA[]]></hook>
-	</hooks>
+    <hooks>
+        <hook name="paymentButtons" type="smarty" page_type="front" filename="button"><![CDATA[]]></hook>
+    </hooks>
 
-	<phrases>
-		<phrase key="cashenvoy_payment_canceled_by_inactivity" category="common">User cancellation by inactivity.</phrase>
-		<phrase key="cashenvoy_payment_no_transaction" category="common">No transaction record.</phrase>
-		<phrase key="cashenvoy_payment_insufficient_funds" category="common">Insufficient funds.</phrase>
-		<phrase key="cashenvoy_payment_transaction_failed" category="common">Transaction failed. Contact support@cashenvoy.com for more information.</phrase>
-		<phrase key="cashenvoy_payment_unknown_error" category="common">Unknown error. Please contact site administrator.</phrase>
-	</phrases>
-</plugin>
+    <phrases>
+        <phrase key="cashenvoy_payment_canceled_by_inactivity" category="common">User cancellation by inactivity.</phrase>
+        <phrase key="cashenvoy_payment_no_transaction" category="common">No transaction record.</phrase>
+        <phrase key="cashenvoy_payment_insufficient_funds" category="common">Insufficient funds.</phrase>
+        <phrase key="cashenvoy_payment_transaction_failed" category="common">Transaction failed. Contact support@cashenvoy.com for more information.</phrase>
+        <phrase key="cashenvoy_payment_unknown_error" category="common">Unknown error. Please contact site administrator.</phrase>
+    </phrases>
+</module>

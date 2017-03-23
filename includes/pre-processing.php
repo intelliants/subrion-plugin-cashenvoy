@@ -32,7 +32,7 @@ $formValues['ce_customerid'] = iaUsers::hasIdentity() ? iaUsers::getIdentity()->
 $formValues['ce_memo'] = $transaction['operation'];
 $formValues['ce_notifyurl'] = IA_RETURN_URL . 'completed' . IA_URL_DELIMITER;
 
-$data = $key.$formValues['ce_transref'].$formValues['ce_amount'];
+$data = $key . $formValues['ce_transref'] . $formValues['ce_amount'];
 $formValues['ce_signature'] = hash_hmac('sha256', $data, $key, false);
 
 $iaView->assign('formValues', $formValues);
